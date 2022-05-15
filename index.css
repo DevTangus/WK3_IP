@@ -2,7 +2,13 @@
   padding: 0;
   margin: 0;
   background-color: plum;
+  margin-left: 10px;
 }
 .quiz {
-background-color: darkturquoise;
+  background-color: darkturquoise;
+  font-size: 20px;
+  font-weight: bold;
+}
+#quizForm .quiz input {
+  background-color: aquamarine;
 }

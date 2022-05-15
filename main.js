@@ -1,57 +1,45 @@
-function checkYourscore() {
-  console.log(totalScore);
-
-  var quiz1 = document.forms.Q1.value;
-  var quiz2 = document.forms.Q2.value;
-  var quiz3 = document.forms.Q3.value;
-  var quiz4 = document.forms.Q4.value;
-  var quiz5 = document.forms.Q5.value;
+function checkScore() {
+  var quiz1 = document.form.Q1.value;
+  var quiz2 = document.form.Q2.value;
+  var quiz3 = document.form.Q3.value;
+  var quiz4 = document.form.Q4.value;
+  var quiz5 = document.form.Q5.value;
 
   var score = 0;
+  var quizForm = document.getElementById("quizForm");
   var myScore = document.getElementById("myScore");
-  var feedback = document.getElementById("feedback");
+  if (quiz1 == "2") {
+    score++;
+  }
+  if (quiz2 == "1") {
+    score++;
+  }
+  if (quiz3 == "3") {
+    score++;
+  }
+  if (quiz4 == "1") {
+    score++;
+  }
+  if (quiz5 == "3") {
+    score++;
+  }
 
-if (quiz1 == "2") {
-  myScore++;
-}
-if (quiz2 == "1") {
-  myScore++;
-}
-if (quiz3 == "3") {
-  myScore++;
-}
-if (quiz4 == "1") {
-  myScore++;
-}
-if (quiz5 == "3") {
-  myScore++;
-}
+  if (quiz1 == "" || quiz2 == "" || quiz3 == "" || quiz4 == "" || quiz5 == "") {
+    alert("Please Answer ALL Questions!");
+  }
 
-if (quiz1 == "" || quiz2 == "" || quiz3 == "" || quiz4 == "" || quiz5 == "") {
-  alert("Please Answer ALL Questions!");
-}
+  quizForm.style.display = "none";
 
-var totalScore = myScore * 20;
-if (myScore >= 80) {
-  myScore.innerHTML = "Your Score is" + totalScore + " " + "Splendid Work!";
-} else if (totalScore >= 50 && totalScore < 70) {
-  myScore.innerHTML = "Your Score" + totalScore + " " + "Fair Try!";
-} else if (myScore >= 0 && totalScore < 50) {
-  myScore.innerHTML = "our Score" + totalScore + " " + "Give it Another Shot!";
-}
+  var totalScore = score * 20;
 
-}
-
-function feedback() {
-  feedback = totalScore;
-}
-
-var feedback = document.getElementById("feedback");
-
-if (feedback >= 80) {
-  myScore.innerHTML = "Excellent!";
-} else if (feedback >= 50 && feedback < 80) {
-  myScore.innerHTML = "Fair Try!";
-} else if (feedback >= 0 && feedback < 50) {
-  myScore.innerHTML = " Try Again!";
+  if (totalScore >= 80) {
+    totalScore.textContent =
+      "Your score is" + totalSscore + "%" + "Splendid Work!";
+  }
+  if (totalScore >= 60 && totalScore < 80) {
+    totalScore.textContent = "Your score is" + totalSscore + "%" + "Good!";
+  } else if (totalScore >= 0 && totalScore <= 60) {
+    totalScore.textContent =
+      "Your score is" + totalSscore + "%" + "Fair Trial!";
+  }
 }
