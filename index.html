@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Quiz Board</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div class="h1"><h1> Testing knowledge</h1></div>
+        <p>Note each question has one mark</p>
+        <h2>Quiz Board</h2>
+          <form action="" name="form">
+            <div>
+            <p class="quiz">
+              Q1. What does Javascript return if to you if you try to access a object's property that doesn't exist?
+            </p>
+            <br />
+            <input type="radio" name="Q1" value="1" />null <br />
+            <input type="radio" name="Q1" value="2" />undefined <br />
+            <input type="radio" name="Q1" value="3" />error! <br />
+            <input type="radio" name="Q1" value="4" />done<br />
+          </div>
+          <div>
+            <p class="quiz">Q2. What is type of error returns when you misspell a word or instruction</p>
+            <br />
+            <input type="radio" name="Q2" value="1" /> syntax<br />
+            <input type="radio" name="Q2" value="2" /> logic<br />
+            <input type="radio" name="Q2" value="3" /> system<br />
+            <input type="radio" name="Q2" value="4" /> runtime<br />
+
+          </div>
+          <p class="quiz">
+            <div>
+              Q3. Which of the following terms describe a loop structure that continues repeating without a condition to terminate?
+            </p>
+            <br />
+            <input type="radio" name="Q3" value="1" /> unlimited loop<br />
+            <input type="radio" name="Q3" value="2" /> sequence loop<br />
+            <input type="radio" name="Q3" value="3" /> infinite loop<br />
+            <input type="radio" name="Q3" value="4" /> conditional loop<br />
+          </div>
+          <div>
+            <p class="quiz">
+              Q4. Which term describes expressions that result in the value of either true or false?
+            </p>
+            <br />
+            <input type="radio" name="Q4" value="1" />boolean <br />
+            <input type="radio" name="Q4" value="2" /> concatenation<br />
+            <input type="radio" name="Q4" value="3" /> selection<br />
+            <input type="radio" name="Q4" value="4" /> conditional<br />
+          </div>
+          <div>
+            <p class="quiz">
+              Q5. What is the term that describes individuals who write computer code?
+            </p>
+            <br />
+            <input type="radio" name="Q5" value="1" /> cryptographers
+            <br />
+            <input type="radio" name="Q5" value="2" />manufacturers
+            <br />
+            <input type="radio" name="Q5" value="3" /> programmers
+            <br />
+            <input type="radio" name="Q5" value="4" /> professors
+            </div>
+              <div>
+            <input type="button"  onclick="checkScore()" value="submit" />
+</div>
+          </form>
+        </div>
+      </div>
+
+      <div id="results">
+        <p id="displayForm">Score</p>
+        <button onclick="myComments">
+          <p class="four">View Comment</p>
+        </button>
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
