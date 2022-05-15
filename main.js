@@ -1,16 +1,15 @@
 function checkYourscore() {
-  console.log();
-}
+  console.log(totalScore);
 
-var quiz1 = document.forms.Q1.value;
-var quiz2 = document.forms.Q2.value;
-var quiz3 = document.forms.Q3.value;
-var quiz4 = document.forms.Q4.value;
-var quiz5 = document.forms.Q5.value;
+  var quiz1 = document.forms.Q1.value;
+  var quiz2 = document.forms.Q2.value;
+  var quiz3 = document.forms.Q3.value;
+  var quiz4 = document.forms.Q4.value;
+  var quiz5 = document.forms.Q5.value;
 
-var score = 0;
-var myScore = document.getElementById("myScore");
-var feedback = document.getElementById("feedback");
+  var score = 0;
+  var myScore = document.getElementById("myScore");
+  var feedback = document.getElementById("feedback");
 
 if (quiz1 == "2") {
   myScore++;
@@ -39,6 +38,8 @@ if (myScore >= 80) {
   myScore.innerHTML = "Your Score" + totalScore + " " + "Fair Try!";
 } else if (myScore >= 0 && totalScore < 50) {
   myScore.innerHTML = "our Score" + totalScore + " " + "Give it Another Shot!";
+}
+
 }
 
 function feedback() {
